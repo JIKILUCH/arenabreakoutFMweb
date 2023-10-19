@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>html, body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-image: url('bgcamouflage.jpg');
+        background-size: cover;
+        background-repeat: repeat;
+        z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <ul class="menu">
+            <li>|</li>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="tutorial.html">TUTORIAL</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li>|</li>
+            <li class="auth-links">
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </li>
+            <li>|</li>
+        </ul>
+    </div>      
+    <div class="login-container">
+        <h2 class="h2">Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+           
+            if (username === 'your_username' && password === 'your_password') {
+                alert('Login successful');
+                
+            } else {
+                alert('Incorrect Username/Password.');
+            }
+        });
+    </script>
+</body>
+</html>
